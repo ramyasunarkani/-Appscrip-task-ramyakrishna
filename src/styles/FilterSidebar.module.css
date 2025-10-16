@@ -1,0 +1,67 @@
+.side {
+    width: 250px;
+    padding-right: 20px;
+    transition: all 0.3s ease;
+    margin-left: 3rem;
+}
+
+.costomize {
+    margin-bottom: 10px;
+}
+
+.divider {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.filterSection {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+}
+
+.headingRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.headingideal {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.arrowIcon {
+    transition: transform 0.3s ease;
+}
+
+.rotateArrow {
+    transform: rotate(180deg);
+}
+
+.categoryItem {
+    margin: 5px 0;
+}
+
+.categoryItem input {
+    margin-right: 8px;
+}
+
+.ideal {
+    margin-left: 8px;
+}
+
+.unselectAll {
+    color: gray;
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 8px;
+    margin-bottom: 6px;
+}
+
+.allOption {
+    margin-left: 8px;
+    margin-top: 4px;
+}

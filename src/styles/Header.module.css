@@ -1,0 +1,188 @@
+.navLink {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.navLink:hover {
+    color: #EB4C6B;
+}
+
+.header {
+    width: 100%;
+}
+
+.topBanner {
+    padding: 5px 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+}
+
+.promoText {
+    color: #EB4C6B;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.desktopPromo {
+    display: flex;
+    gap: 40px;
+}
+
+.navbar {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #e1e1e1;
+    position: relative;
+}
+
+.logobox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.brand {
+    order: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    order: 2;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+}
+
+.topIcons {
+    order: 3;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.langBox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.langText {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 5px;
+    color: black;
+}
+
+.navMenu {
+    display: flex;
+    justify-content: center;
+    gap: 45px;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    padding: 15px 0;
+}
+
+/* Hamburger bars */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+}
+
+.menuIcon {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --- Mobile Styles --- */
+@media screen and (max-width: 780px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 18px;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+
+        .navMenu {
+            position: absolute;
+            /* Change to absolute to take it out of the flow */
+            top: 100%;
+            /* Position it below the navbar */
+            left: 0;
+            right: 0;
+            flex-direction: column;
+            width: 100%;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+            /* Add this to hide the menu when not active */
+            display: none;
+        }
+
+   .navMenu.active {
+       max-height: 500px;
+       display: flex;
+       /* Show the menu only when active */
+   }
+
+    .navMenu li {
+        border-bottom: 1px solid #eee;
+        padding: 15px 20px;
+    }
+
+    .desktopPromo {
+        display: none;
+    }
+
+    .promoText {
+        font-size: 11px;
+    }
+
+    .langBox {
+        display: none;
+    }
+         .menuIcon {
+             display: block;
+         }
+}

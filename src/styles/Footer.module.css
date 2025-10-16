@@ -1,0 +1,278 @@
+.footer {
+    background-color: black;
+    color: white;
+    padding: 30px 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.footerInnerWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.font1 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.mt {
+    margin-top: 20px;
+}
+
+.mt1 {
+    margin-top: 10px;
+}
+.mt2 {
+   display: none;
+}
+
+.headingPrimary {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.currency {
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.currencyNote {
+    margin-top: 10px;
+    font-size: 0.75rem;
+}
+
+.contactInfo {
+    margin-top: 10px;
+}
+
+.desktopOnly {
+    display: block;
+}
+
+.upbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.emailpart,
+.infopart {
+    flex: 0 0 45%;
+    max-width: 45%;
+    min-width: 280px;
+}
+
+.inputbox {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.inputtag {
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+    background-color: white;
+    color: black;
+    font-size: 14px;
+}
+
+.inputbtn {
+    background-color: black;
+    color: #4C4C4C;
+    border: 1px solid #4C4C4C;
+    padding: 12px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.2s;
+    margin-left: 1rem;
+}
+
+.inputbtn:hover {
+    background-color: #333;
+}
+
+.usabox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.usabox img {
+    border-radius: 50%;
+}
+
+.horizontal {
+    height: 2px;
+    background-color: rgb(146, 142, 142);
+    width: 100%;
+    margin: 30px 0;
+}
+
+.lowerbox {
+    display: flex;
+    justify-content: flex-start;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.metta,
+.quick,
+.follow {
+    flex: 0 0 auto;
+    min-width: 150px;
+}
+
+.mobileHeader {
+    display: none;
+}
+
+.rotateIcon {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.linklist p {
+    margin: 10px 0;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-size: 14px;
+}
+
+.linklist p:hover {
+    color: #eb4c6b;
+}
+
+.instabox {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.instabox img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.paybox {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.paybox img {
+    width: 45px;
+    height: auto;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 780px) {
+
+    .upbox {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .mt1 {
+        display: none;
+    }
+
+    .mt2 {
+        color: #FFFFFF;
+        font-size: 0.85rem;
+    }
+
+    .emailpart,
+    .infopart {
+        flex: auto;
+        max-width: 100%;
+    }
+    .paybox img {
+        width: 40px;
+        height: auto;
+    }
+
+    .contactInfo {
+        margin-top: 10px;
+    }
+
+    .currencyNote {
+        display: none;
+    }
+
+    .currency {
+        margin-top: 15px;
+    }
+
+    .desktopOnly {
+        display: none;
+    }
+
+    .lowerbox {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .metta,
+    .quick,
+    .follow {
+        border-bottom: 1px solid rgb(146, 142, 142);
+        padding: 5px 0;
+        min-width: 100%;
+        flex: auto;
+    }
+
+    .mobileHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 0;
+    }
+
+    .linklist,
+    .followContent {
+        display: none;
+        overflow: hidden;
+    }
+
+    .linklist.open,
+    .followContent.open {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    .linklist p {
+        margin: 8px 0;
+        font-size: 14px;
+    }
+
+    .followContent.open .instabox {
+        margin-top: 10px;
+    }
+
+    .followContent.open .mt {
+        margin-top: 15px;
+    }
+
+    .copyright {
+        margin-top: 30px;
+    }
+}

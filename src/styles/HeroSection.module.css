@@ -1,0 +1,95 @@
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    /* position: relative; */
+    /* Needed for absolute positioning if you want to place the breadcrumb exactly */
+    background-color: #fff;
+    /* Assuming a white background for the hero section */
+}
+
+/* New style for the "Home | Shop" text */
+.navLink {
+display: none;    top: 20px;
+    /* Adjust as needed */
+    left: 20px;
+    /* Aligns to the top-left corner */
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #555;
+    text-transform: uppercase;
+    /* On mobile, this text appears right below the main header, 
+       so we'll adjust its positioning in the media query. */
+}
+
+.heading {
+    font-size: 2rem;
+    font-weight: 700;
+    /* Made bolder to match the image */
+    margin-bottom: 15px;
+    color: #222;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    /* Ensure full caps as in the image */
+}
+
+.para {
+    font-size: 1rem;
+    max-width: 500px;
+    /* Increased max-width to allow the full sentence to fit better */
+    margin-bottom: 25px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Removed .ctaBtn styles as it's not present in your final JSX */
+
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 40px 10px;
+    }
+
+    /* Adjust heading for mobile to match the image's small size */
+    .heading {
+        font-size: 1.25rem;
+        /* Matches the visual size in the mobile image */
+        font-weight: 700;
+    }
+
+    .para {
+        font-size: 0.85rem;
+        /* Smaller text for mobile description */
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
+    /* Mobile adjustment for the navigation link */
+    .navLink {
+        display: block;
+        position: static;
+        /* Remove absolute positioning */
+        order: -1;
+        /* Place it above the heading */
+        margin-bottom: 15px;
+        align-self: flex-start;
+        /* Align to the left */
+        font-size: 0.75rem;
+        padding-left: 10px;
+        /* Small padding to align with content */
+    }
+
+    /* Center the heading and paragraph again after moving the navLink */
+    .hero {
+        align-items: center;
+    }
+
+    .heading,
+    .para {
+        padding: 0 10px;
+    }
+}
