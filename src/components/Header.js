@@ -24,7 +24,6 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      {/* Top banner */}
       <div className={styles.topBanner}>
         <PromoMessage />
         <div className={styles.desktopPromo}>
@@ -33,7 +32,6 @@ function Header() {
         </div>
       </div>
 
-      {/* Navbar */}
       <nav className={styles.navbar}>
         <div className={styles.logobox}>
           <div className={styles.brand}>

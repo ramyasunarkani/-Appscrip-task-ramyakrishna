@@ -30,6 +30,11 @@
     text-decoration: underline;
 }
 
+.deffilterContainer {
+    position: relative;
+    z-index: 22;
+}
+
 .deffilter {
     display: flex;
     align-items: center;
