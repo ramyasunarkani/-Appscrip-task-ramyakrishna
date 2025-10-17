@@ -53,7 +53,13 @@
     color: #555;
     margin: 4px 0;
 }
-
+.noProducts {
+    text-align: center;
+    font-size: 1rem;
+    color: #777;
+    padding: 20px;
+    width: 100%;
+}
 .loadingmain {
     text-align: center;
     padding: 50px;

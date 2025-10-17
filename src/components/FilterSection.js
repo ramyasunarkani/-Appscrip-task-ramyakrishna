@@ -3,8 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import styles from "../styles/FilterSection.module.css";
 import Products from "./Products";
-import FilterSidebar from "./FilterSidebar";
-import { FaAngleDown, FaTimes } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 
 const FilterSection = () => {
   const products = useSelector((state) => state.products.allProducts);
@@ -33,7 +32,6 @@ const FilterSection = () => {
 
   const totalItems = filteredItems.length;
 
-  // Sorting Handlers
   const handleSort = (type) => {
     let sorted = [];
     switch (type) {

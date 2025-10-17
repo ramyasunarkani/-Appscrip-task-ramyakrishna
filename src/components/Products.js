@@ -39,8 +39,15 @@ const Products = ({ showFilter, setShowFilter, item1 }) => {
 
   const filterItems = () => {
     if (filterMultipel.length > 0) {
-      const filtered = products.filter((p) => filterMultipel.includes(p.category));
-      setItems(filtered);
+        const filtered = products.filter((p) => {
+      const productText = `${p.title} ${p.category}`.toLowerCase();
+      return filterMultipel.some((filter) => {
+        const cleanFilter = filter.toLowerCase();
+        const regex = new RegExp(`\\b${cleanFilter}\\b`, "i");
+        return regex.test(productText);
+      });
+    });
+    setItems(filtered);
     } else if (!item1?.length) {
       setItems(products);
     }
@@ -60,32 +67,41 @@ const Products = ({ showFilter, setShowFilter, item1 }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const renderList = items.map((product) => {
-  const { id, image, title } = product;
-  return (
-    <div key={id} className={styles.card}>
-      <div className={styles.imgin}>
-        <img src={image} alt={title} className={styles.img} />
-      </div>
-      <ul className={styles.textbox}>
-            <li className={styles.texttitleRow}>
-      <span className={styles.texttitle}>
-        {title.length > 20 ? title.slice(0, 15) + "..." : title}
-      </span>
-      {isMobileView && (
-        <span className={styles.heartIcon}>
-          <FiHeart />
+  const renderList =()=>{
+    if (!items || items.length === 0) {
+      return (
+        <div className={styles.noProducts}>
+          No products found — we'll be adding more soon!
+        </div>
+      );
+    } 
+    return items.map((product) => {
+    const { id, image, title } = product;
+    return (
+      <div key={id} className={styles.card}>
+        <div className={styles.imgin}>
+          <img src={image} alt={title} className={styles.img} />
+        </div>
+        <ul className={styles.textbox}>
+              <li className={styles.texttitleRow}>
+        <span className={styles.texttitle}>
+          {title.length > 20 ? title.slice(0, 15) + "..." : title}
         </span>
-      )}
-    </li>
-
-        <li className={styles.textsubtitle}>
-          Sign in or create account  See pricing {!isMobileView&&<FiHeart style={{ verticalAlign: "middle" }} />}
-        </li>
-      </ul>
-    </div>
-  );
-});
+        {isMobileView && (
+          <span className={styles.heartIcon}>
+            <FiHeart />
+          </span>
+        )}
+      </li>
+  
+          <li className={styles.textsubtitle}>
+            Sign in or create account  See pricing {!isMobileView&&<FiHeart style={{ verticalAlign: "middle" }} />}
+          </li>
+        </ul>
+      </div>
+    );
+  });
+    }
 
 
   const columnCount = showFilter ? 3 : 4;
@@ -109,7 +125,7 @@ const Products = ({ showFilter, setShowFilter, item1 }) => {
             </div>
           )}
           <div className={styles.main} style={mainGridStyle}>
-            {renderList}
+            {renderList()}
           </div>
         </div>
       ) : (

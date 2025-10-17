@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import styles from "../styles/FilterSidebar.module.css";
 
-const FilterSidebar = ({ filterProducts, filtermultipel, handleCheckboxChange, isMobile }) => {
+const FilterSidebar = ({ filtermultipel, handleCheckboxChange, }) => {
   const [ideal, setIdeal] = useState(false);
   const [occasion, setOccasion] = useState(false);
   const [work, setWork] = useState(false);
