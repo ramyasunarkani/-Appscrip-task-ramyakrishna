@@ -13,7 +13,7 @@ This project is the implementation of the Product Listing Page design provided i
 * **Framework:** React.js
 * **Meta-framework:** Next.js (for Server-Side Rendering support)
 * **Styling:** CSS Modules (no external CSS frameworks)
-* **Data Source:** fakestoreapi.com / Static Mock Data
+* **Data Source:** fakestoreapi.com
 
 ## Key Features & Implementation Highlights
 
@@ -21,7 +21,7 @@ This project is the implementation of the Product Listing Page design provided i
 2. **Responsiveness:** Fully responsive for mobile and tablet screens.
 3. **Server-Side Rendering (SSR):** Implemented using Next.js.
 4. **Code Quality & Structure:**
-5. **Mock API Integration (if applicable):** Dynamically fetched and rendered data from fakestoreapi.com.
+5. **Mock API Integration :** Dynamically fetched and rendered data from fakestoreapi.com.
 
 
 ##  Running the Project Locally
