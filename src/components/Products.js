@@ -42,9 +42,11 @@ const Products = ({ showFilter, setShowFilter, item1 }) => {
   }, [item1, products, filterMultipel]);
 
   useEffect(() => {
-    filterItems();
-    dispatch(selectProduct(items));
-  }, [filterItems, dispatch, items]);
+  dispatch(selectProduct(items));
+}, [items, dispatch]);
+useEffect(() => {
+  filterItems();
+}, [filterItems]);
 
   const handleCheckboxChange = (cat) => {
     setFilterMultipel((prev) =>
@@ -64,7 +66,7 @@ const Products = ({ showFilter, setShowFilter, item1 }) => {
 
   const renderList = () => {
     if (!items || items.length === 0) {
-      return <div className={styles.noProducts}>No products found — we'll be adding more soon!</div>;
+      return <div className={styles.noProducts}>No products found — we will be adding more soon!</div>;
     }
     return items.map((product) => {
       const { id, image, title } = product;
