@@ -17,7 +17,6 @@ export default function Home() {
       .catch(err => console.error(err));
   }, [dispatch]);
   const products = useSelector(state => state.products.allProducts);
-console.log(products);
 
   return (
     <>
