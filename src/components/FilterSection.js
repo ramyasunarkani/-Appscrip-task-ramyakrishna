@@ -18,7 +18,7 @@ const FilterSection = () => {
   useEffect(() => setIsClient(true), []);
 
   useEffect(() => {
-    if (products.length > 0) {
+    if (products?.length > 0) {
       const recommended = products.filter((item) => (item.rating?.rate || 0) >= 4);
       setFilteredItems(recommended);
     }

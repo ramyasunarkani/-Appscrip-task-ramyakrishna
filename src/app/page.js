@@ -1,30 +1,10 @@
-'use client'
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "@/Store/productsSlice";
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import FilterSection from "@/components/FilterSection";
-import Footer from "@/components/Footer";
+import Content from "@/components/Content";
 
-export default function Home() {
-  const dispatch = useDispatch();
+export default async function Home() {
+  const res = await fetch("https://fakestoreapi.com/products", {
+    cache: "no-store",
+  });
+  const products = await res.json();
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then(res => res.json())
-      .then(json => dispatch(setProducts(json)))
-      .catch(err => console.error(err));
-  }, [dispatch]);
-  const products = useSelector(state => state.products.allProducts);
-console.log(products);
-
-  return (
-    <>
-      <Header />
-      <HeroSection />
-      <FilterSection />
-      <Footer />
-    </>
-  );
+  return <Content products={products} />;
 }

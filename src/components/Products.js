@@ -73,7 +73,7 @@ useEffect(() => {
       return (
         <div key={id} className={styles.card}>
           <div className={styles.imgin}>
-            <Image src={image} alt={title} width={300} height={300} className={styles.img} />
+            <Image src={image} alt={title} width={300} height={300} className={styles.img} priority={true}/>
           </div>
           <ul className={styles.textbox}>
             <li className={styles.texttitleRow}>
